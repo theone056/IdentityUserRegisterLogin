@@ -1,0 +1,89 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model UserRegistrationModel
+@{
+}
+
+<div class="container-fluid w-50 card p-3 mt-5 px-lg-5">
+    <div class="mb-4">
+        <span>Already register? <a asp-controller="Account" asp-action="Login" class="text-decoration-none">Login</a></span>
+    </div>
+    <form asp-controller="Account" asp-action="Register">
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>First Name</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="FirstName"/>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Last Name</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="LastName" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Username</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="UserName" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Phone</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Email</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Password</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="form-label w-25 form-text">
+                <label>Confirm Password</label>
+            </div>
+            <div class="flex-grow-1">
+                <input class="form-control" asp-for="ConfirmPassword" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex mb-3 align-items-center">
+            <div class="w-25"></div>
+            <div class="">
+                <button class="btn btn-primary" type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib//jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
